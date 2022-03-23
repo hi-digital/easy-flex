@@ -1,6 +1,6 @@
 {
   "name": "@hi_digital/easy-flex",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "description": "Lightweight and easy to use css flexbox grid system",
   "scripts": {
     "dev": "vite",
