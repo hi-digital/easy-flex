@@ -2,7 +2,7 @@
 @import 'grid';
 @import 'helpers';
 
-$grid-color: rgb(61, 133, 255);
+$grid-color: rgba(125, 176, 246, 0.67);
 
 body {
   font-family: 'Corbel', sans-serif;
@@ -12,12 +12,18 @@ body {
   &__grid {
     code {
       @extend .demo__paragraph;
-      padding: .5rem;
-      background-color: lighten($grid-color, 30);
-      border: 1px inset $grid-color;
-      display: flex;
-      justify-items: center;
-      align-items: center;
+      background-color: lighten($grid-color, 20);
+      border: 1px solid $grid-color;
+      text-align: center;
+      display: block;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      margin-bottom: 1rem;
+      border-radius: .25rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
     }
   }
 
@@ -25,7 +31,7 @@ body {
     @include responsive-font(2.8vw, 32px, 46px, 36px);
     font-family: 'Corbel', sans-serif;
     line-height: 1.1;
-    margin-bottom: 1em;
+    margin: 1em 0;
     font-weight: bold;
   }
 
@@ -34,5 +40,11 @@ body {
     font-family: 'Corbel', sans-serif;
     line-height: 1.1;
     font-weight: normal;
+  }
+
+  &__subtitle {
+    @extend .demo__paragraph;
+    margin-bottom: 1em;
+    font-weight: bold;
   }
 }
