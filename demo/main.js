@@ -1,1 +1,1 @@
-import '../index.scss'
+import '../src/demo/_demo.scss'

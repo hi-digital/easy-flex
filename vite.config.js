@@ -1,9 +1,9 @@
 export default {
     // config options
-    root: './public',
+    root: './demo',
     build: {
         emptyOutDir: true,
         manifest: true,
-        outDir: './demo/dist',
+        outDir: './public',
     }
 }

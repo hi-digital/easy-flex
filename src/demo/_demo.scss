@@ -1,0 +1,38 @@
+@import 'reset';
+@import 'grid';
+@import 'helpers';
+
+$grid-color: rgb(61, 133, 255);
+
+body {
+  font-family: 'Corbel', sans-serif;
+}
+
+.demo {
+  &__grid {
+    code {
+      @extend .demo__paragraph;
+      padding: .5rem;
+      background-color: lighten($grid-color, 30);
+      border: 1px inset $grid-color;
+      display: flex;
+      justify-items: center;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    @include responsive-font(2.8vw, 32px, 46px, 36px);
+    font-family: 'Corbel', sans-serif;
+    line-height: 1.1;
+    margin-bottom: 1em;
+    font-weight: bold;
+  }
+
+  &__paragraph {
+    @include responsive-font(1.8vw, 16px, 24px, 18px);
+    font-family: 'Corbel', sans-serif;
+    line-height: 1.1;
+    font-weight: normal;
+  }
+}

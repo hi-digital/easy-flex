@@ -1,0 +1,173 @@
+@use 'sass:math';
+@import 'helpers';
+
+
+@mixin create-container() {
+  .container {
+    width: $container-base;
+    max-width: $container-max-width;
+    margin: 0 auto;
+
+    @each $key, $value in $container-widths {
+      @include respond-to($key) {
+        width: $value;
+      }
+    }
+  }
+}
+
+@mixin create-row() {
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: math.div($base-gutter, -2);
+    margin-right: math.div($base-gutter, -2);
+
+    @each $key, $value in $breakpoints {
+      @include respond-to($key) {
+        @if map-has-key($gutter-widths, $key) {
+          margin-left: math.div(map-get($gutter-widths, $key), -2);
+          margin-right: math.div(map-get($gutter-widths, $key), -2);
+        }
+      }
+    }
+
+    &--reverse {
+      flex-flow: row-reverse wrap;
+
+      @each $key, $value in $container-widths {
+        @include respond-to($key) {
+          &\@#{$key} {
+            flex-flow: row-reverse wrap;
+          }
+        }
+      }
+    }
+
+    &-justify-between {
+      justify-content: space-between;
+    }
+
+    &-justify-around {
+      justify-content: space-around;
+    }
+
+    &-justify-even {
+      justify-content: space-evenly;
+    }
+
+  }
+}
+
+@mixin create-grid-base() {
+  @for $index from 1 through $columns-amount {
+    .gr-#{$index} {
+      max-width: math.div(100%, $columns-amount) * $index;
+      flex-basis: math.div(100%, $columns-amount) * $index;
+      flex-direction: column;
+      display: block;
+      box-sizing: border-box;
+      padding-left: math.div($base-gutter, 2);
+      padding-right: math.div($base-gutter, 2);
+
+      @each $key, $value in $breakpoints {
+        @include respond-to($key) {
+          @if map-has-key($gutter-widths, $key) {
+            padding-left: math.div(map-get($gutter-widths, $key), 2);
+            padding-right: math.div(map-get($gutter-widths, $key), 2);
+          }
+        }
+      }
+
+    }
+
+    .prefix-#{$index} {
+      margin-left: math.div(100%, $columns-amount) * $index;
+    }
+
+    .suffix-#{$index} {
+      margin-right: math.div(100%, $columns-amount) * $index;
+    }
+
+    .push-#{$index} {
+      position: relative;
+      left: math.div(100%, $columns-amount) * $index;
+      right: auto;
+    }
+
+    .pull-#{$index} {
+      position: relative;
+      right: math.div(100%, $columns-amount) * $index;
+      left: auto;
+    }
+
+    .order-#{$index} {
+      order: $index;
+    }
+  }
+
+  .show {
+    display: unset;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+@mixin create-grid-states() {
+  @for $index from 1 through $columns-amount {
+    @each $key, $value in $breakpoints {
+      @include respond-to($key) {
+        .gr-#{$index}\@#{$key} {
+          max-width: math.div(100%, $columns-amount) * $index;
+          width: math.div(100%, $columns-amount) * $index;
+          flex-direction: column;
+          display: block;
+          box-sizing: border-box;
+          flex: 0 0 auto;
+
+          @each $key, $value in $breakpoints {
+            @include respond-to($key) {
+              @if map-has-key($gutter-widths, $key) {
+                padding-left: math.div(map-get($gutter-widths, $key), 2);
+                padding-right: math.div(map-get($gutter-widths, $key), 2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin create-prefixes() {
+  @for $index from 1 through $columns-amount {
+    @each $key, $value in $breakpoints {
+      @include respond-to($key) {
+        .prefix-#{$index}\@#{$key} {
+          margin-left: math.div(100%, $columns-amount) * $index;
+        }
+
+        .suffix-#{$index}\@#{$key} {
+          margin-right: math.div(100%, $columns-amount) * $index;
+        }
+
+        .push-#{$index}\@#{$key} {
+          position: relative;
+          left: math.div(100%, $columns-amount) * $index;
+          right: auto;
+        }
+
+        .pull-#{$index}\@#{$key} {
+          position: relative;
+          right: math.div(100%, $columns-amount) * $index;
+          left: auto;
+        }
+      }
+    }
+  }
+}
+
+
+
