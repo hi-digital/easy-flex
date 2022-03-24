@@ -48,10 +48,12 @@ Import easy-flex in scss.
 Define breakpoints with gutter width and vertical space for the container.
 
 ```scss
-@include easy-flex-breakpoint('mobile', 480px, 10px, 10px);
-@include easy-flex-breakpoint('tablet', 768px, 10px, 10px);
-@include easy-flex-breakpoint('laptop', 1024px, 10px, 10px);
-@include easy-flex-breakpoint('desktop', 1440px, 10px, 10px);
+@include easy-flex-breakpoint('tiny', 480px, 10px, 10px);
+@include easy-flex-breakpoint('small', 768px, 10px, 10px);
+@include easy-flex-breakpoint('medium', 1024px, 10px, 20px);
+@include easy-flex-breakpoint('large', 1200px, 10px, 20px);
+@include easy-flex-breakpoint('huge', 1440px, 20px, 40px);
+@include easy-flex-breakpoint('full', 1680px, 20px, 40px);
 ```
 
 Create the grid with container base values.
@@ -60,7 +62,7 @@ Create the grid with container base values.
 @include create-easy-flex((
         columns: 12,
         container-width: 100%,
-        container-max-width: 1920px,
+        container-max-width: 1680px,
         gutter-width: 10px,
         vertical-space: 10px,
 ));
@@ -72,15 +74,15 @@ Use the grid in html. Basic Markup with breakpoints:
 
 <div class="container">
     <div class="row">
-        <div class="gr-12 gr-6@tablet">
+        <div class="gr-12 gr-6@small">
             content
         </div>
 
-        <div class="gr-12 gr-6@desktop">
+        <div class="gr-12 gr-6@large">
             content
         </div>
 
-        <div class="gr-12 gr-6@tablet">
+        <div class="gr-12 gr-6@small">
             content
         </div>
     </div>
@@ -96,7 +98,7 @@ There are some helper classes which you can use on each defined breakpoint.
 Easy use of media queries in scss files for each defined breakpoint.
 
 ```scss
-@include respond-to(tablet) {
+@include respond-to(small) {
   property: style;
 }  
 ```
@@ -107,12 +109,12 @@ Easy use of media queries in scss files for each defined breakpoint.
 
 <div class="container">
     <div class="row">
-        <div class="gr-12 gr-6@desktop hide@tablet show@desktop">
-            This column gets hidden @tablet and shown again on @desktop
+        <div class="gr-12 gr-6@large hide@small show@large">
+            This column gets hidden @small and shown again on @large
         </div>
 
-        <div class="gr-6 hide show@tablet">
-            This column is hidden until @tablet
+        <div class="gr-6 hide show@small">
+            This column is hidden until @small
         </div>
     </div>
 </div>
@@ -137,8 +139,8 @@ The prefix and suffix classes are used to create blanks before or after a grid e
             This has 8 column width and 2 columns dead space to the right
         </div>
 
-        <div class="gr-4 prefix-2@tablet">
-            This has 4 column width and @tablet 2 columns dead space to the left
+        <div class="gr-4 prefix-2@small">
+            This has 4 column width and @small 2 columns dead space to the left
         </div>
     </div>
 </div>
@@ -163,8 +165,8 @@ The push and pull classes are used to offset the grid's elements or even swap th
             This has 8 column width and offset 4 columns to the right
         </div>
 
-        <div class="gr-4 pull-6@tablet">
-            This has 4 column width and @tablet offset 6 columns to the left
+        <div class="gr-4 pull-6@small">
+            This has 4 column width and @small offset 6 columns to the left
         </div>
     </div>
 </div>
@@ -184,14 +186,14 @@ class.
 
 <div class="container">
     <div class="row">
-        <div class="gr-6 order-2@tablet">
-            First element in markup is the second element displayed @tablet
+        <div class="gr-6 order-2@small">
+            First element in markup is the second element displayed @small
         </div>
-        <div class="gr-6 order-3@tablet">
-            Second element in markup is the third element displayed @tablet
+        <div class="gr-6 order-3@small">
+            Second element in markup is the third element displayed @small
         </div>
-        <div class="gr-6 order-1@tablet">
-            Third element in markup is the first element displayed @tablet
+        <div class="gr-6 order-1@small">
+            Third element in markup is the first element displayed @small
         </div>
     </div>
 </div>
@@ -226,13 +228,13 @@ Prevent a row from wrapping the columns on each breakpoint
 ```html
 
 <div class="container">
-    <div class="row row-no-wrap@tablet row-wrap@desktop">
-        <div class="gr-12 gr-6@tablet">
-            Does not wrap @tablet until @desktop
+    <div class="row row-no-wrap@small row-wrap@large">
+        <div class="gr-12 gr-6@small">
+            Does not wrap @small until @large
         </div>
 
-        <div class="gr-12 gr-6@tablet">
-            Does not wrap @tablet until @desktop
+        <div class="gr-12 gr-6@small">
+            Does not wrap @small until @large
         </div>
     </div>
 </div>
@@ -250,13 +252,13 @@ Changes the order of elements in a row
 ```html
 
 <div class="container">
-    <div class="row row-no-wrap@tablet row-wrap@desktop">
-        <div class="gr-12 gr-6@tablet">
-            Does not wrap @tablet until @desktop
+    <div class="row row-no-wrap@small row-wrap@large">
+        <div class="gr-12 gr-6@small">
+            Does not wrap @small until @large
         </div>
 
-        <div class="gr-12 gr-6@tablet">
-            Does not wrap @tablet until @desktop
+        <div class="gr-12 gr-6@small">
+            Does not wrap @small until @large
         </div>
     </div>
 </div>
