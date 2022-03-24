@@ -5,8 +5,8 @@
     <title>Easy Flex Demo Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
+
 
 <div class="container">
     <div class="row">
@@ -22,6 +22,7 @@
             <div class="row">
                 <div class="gr-12">
                     <h2 class="demo__subtitle">Grid with Breakpoints</h2>
+                    <p class="demo__paragraph demo__paragraph--mb">Resize the browser window to see the effect.</p>
                 </div>
 
                 <div class="gr-6">
@@ -46,7 +47,7 @@
         <div class="container">
             <div class="row row-no-wrap">
                 <div class="gr-12">
-                    <h2 class="demo__subtitle">Sample rows</h2>
+                    <h2 class="demo__subtitle demo__subtitle--mb">Sample rows</h2>
                 </div>
                 <div class="gr-12">
                     <code>.gr-12</code>
@@ -98,6 +99,53 @@
             </div>
         </div>
     </section>
+
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="gr-12">
+                    <h2 class="demo__subtitle">Row justify</h2>
+                    <p class="demo__paragraph demo__paragraph--mb">
+                        row-justify-between@small
+                    </p>
+                </div>
+            </div>
+            <div class="row row-justify-between@small">
+                <div class="gr-4">
+                    <code>.gr-4</code>
+                </div>
+                <div class="gr-4">
+                    <code>.gr-4</code>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="gr-12">
+                    <h2 class="demo__subtitle">Order elements</h2>
+                    <p class="demo__paragraph demo__paragraph--mb">
+                        To get this to work properly, every element needs the order class.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="gr-6 order-2@small">
+                    <code>First element in markup<br/>.order-2@small</code>
+                </div>
+                <div class="gr-6 order-3@small">
+                    <code>Second element in markup<br/>.order-3@small</code>
+                </div>
+                <div class="gr-6 order-1@small">
+                    <code>Third element in markup<br/>.order-1@small</code>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
 
 <script type="module" src="./main.js"></script>

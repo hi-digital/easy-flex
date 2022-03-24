@@ -1,5 +1,5 @@
-@use "sass:map";
-@import "mixins";
+@use 'sass:map';
+@import 'mixins', 'helpers';
 
 /*
  * Default grid values which are used, when no breakpoints are defined
@@ -11,6 +11,7 @@ $settings: (
         gutter-width: 0px,
         vertical-space: 0px,
 );
+
 $breakpoints: (
         landscape: 'only screen and (orientation:landscape)',
         portrait : 'only screen and (orientation:portrait)',
@@ -35,25 +36,6 @@ $gutter-widths: ();
   $breakpoints: map.merge($breakpoints, ($name : 'only screen and (min-width: #{$pixels})')) !global;
   $gutter-widths: map.merge($gutter-widths, ($name : $gutter)) !global;
   $container-widths: map.merge($container-widths, ($name : calc(100% - #{$vertical-space * 2}))) !global;
-}
-
-/**
- * Easy use of media queries in scss files
- * @author Ivo Wermelinger @iwe-hi / @ivowermelinger
- * @param 		{String} 		$breakpoint      The name of a registered breakpoint
- *
- * @example 	scss
- * @include respond-to(small) {};
- *
- */
-@mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media #{map-get($breakpoints, $breakpoint)} {
-      @content;
-    }
-  } @else {
-    @error 'No value found for `#{$breakpoint}`. ' + 'Please make sure it is defined in `$breakpoints` map.';
-  }
 }
 
 /**

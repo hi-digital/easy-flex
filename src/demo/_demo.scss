@@ -2,18 +2,22 @@
 @import 'grid';
 @import 'helpers';
 
-$grid-color: rgba(125, 176, 246, 0.67);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+$grid-color: rgba(227, 227, 227, 0.97);
 
 body {
-  font-family: 'Corbel', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #3f3f3f;
+  color: #ffffff;
 }
 
 .demo {
   &__grid {
     code {
       @extend .demo__paragraph;
-      background-color: lighten($grid-color, 20);
-      border: 1px solid $grid-color;
+      background-color: $grid-color;
+      color: #000000;
       text-align: center;
       display: block;
       padding-top: .5rem;
@@ -40,11 +44,18 @@ body {
     font-family: 'Corbel', sans-serif;
     line-height: 1.1;
     font-weight: normal;
+
+    &--mb {
+      margin-bottom: 1em;
+    }
   }
 
   &__subtitle {
     @extend .demo__paragraph;
-    margin-bottom: 1em;
     font-weight: bold;
+
+    &--mb {
+      margin-bottom: 1em;
+    }
   }
 }

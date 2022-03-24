@@ -44,10 +44,30 @@
           margin-left: math.div(map-get($gutter-widths, $key), -2);
           margin-right: math.div(map-get($gutter-widths, $key), -2);
         }
+
+        &-justify-between\@#{$key} {
+          justify-content: space-between;
+        }
+
+        &-justify-around\@#{$key} {
+          justify-content: space-around;
+        }
+
+        &-justify-even\@#{$key} {
+          justify-content: space-evenly;
+        }
+
+        &-no-wrap\@#{$key} {
+          flex-flow: column nowrap;
+        }
+
+        &-wrap\@#{$key} {
+          flex-flow: row wrap;
+        }
       }
     }
 
-    &--reverse {
+    &-reverse {
       flex-flow: row-reverse wrap;
 
       @each $key, $value in $container-widths {
@@ -224,7 +244,7 @@
  *
  */
 @mixin create-order() {
-  $columns-amount : map-get($settings, columns);
+  $columns-amount: map-get($settings, columns);
 
   @for $index from 1 through $columns-amount {
     @each $key, $value in $breakpoints {

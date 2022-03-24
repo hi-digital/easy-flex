@@ -4,6 +4,6 @@ export default {
     build: {
         emptyOutDir: true,
         manifest: true,
-        outDir: './public',
+        outDir: './dist',
     }
 }
