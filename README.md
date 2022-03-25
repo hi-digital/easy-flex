@@ -1,6 +1,6 @@
 # @hi_digital/easy-flex
 
-![npm package version](https://img.shields.io/badge/version-v1.2.0-blue)
+![npm package version](https://img.shields.io/badge/version-v1.2.3-blue)
 ![NPM](https://img.shields.io/badge/license-MIT-brightgreen)
 ![dependency status](https://img.shields.io/librariesio/release/npm/@hi_digital/easy-flex)
 ![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fhi-schweiz.ch)
@@ -114,6 +114,27 @@ Adds a custom class for each breakpoint.
 @include easy-add-class(name) {
   property: style;
 }
+```
+
+#### Example
+
+```scss
+@include easy-add-class(tac) {
+  text-align: center !important;
+}
+```
+
+#### Usage
+
+```html
+
+<div class="container">
+    <div class="row">
+        <div class="gr-12 gr-6@small tac@small">
+            This column gets hidden @small and shown again on @large
+        </div>
+    </div>
+</div>
 ```
 
 ## Helper Classes
