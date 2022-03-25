@@ -263,3 +263,32 @@ Changes the order of elements in a row
     </div>
 </div>
 ```
+
+### No gutter
+
+Removes the padding or padding left / right from grid elements
+
+```html
+.no-gutter
+.no-gutter-left
+.no-gutter-right
+
+.no-gutter@{breakpoint}
+.no-gutter-left@{breakpoint}
+.no-gutter-right@{breakpoint}
+```
+
+```html
+
+<div class="container">
+    <div class="row">
+        <div class="gr-12 gr-6@small no-gutter-right@large">
+            Removes the padding right @large
+        </div>
+
+        <div class="gr-12 gr-6@small no-gutter-left@large">
+            Removes the padding left @large
+        </div>
+    </div>
+</div>
+```
