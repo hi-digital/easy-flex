@@ -1,9 +1,9 @@
 # @hi_digital/easy-flex
 
-![npm package version](https://img.shields.io/npm/v/@hi_digital/easy-flex.svg)
-![npm downloads](https://img.shields.io/npm/dw/@hi_digital/easy-flex)
-![NPM](https://img.shields.io/npm/l/@hi_digital/easy-flex)
-![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@hi_digital/easy-flex)
+![npm package version](https://img.shields.io/badge/version-v1.2.0-blue)
+![NPM](https://img.shields.io/badge/license-MIT-brightgreen)
+![dependency status](https://img.shields.io/librariesio/release/npm/@hi_digital/easy-flex)
+![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fhi-schweiz.ch)
 
 Easy Flex is a lightweight, simple to use scss grid system based on css flexbox. It is heavily inspired
 by [Coffeekraken's gridle v2.0.48](https://github.com/Coffeekraken/gridle/tree/2e6e81e9d10a8dbdc809fe19ea792a532433b5d5)
