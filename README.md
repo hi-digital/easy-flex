@@ -13,15 +13,18 @@ by [Coffeekraken's gridle v2.0.48](https://github.com/Coffeekraken/gridle/tree/2
 
 1. [Install](#install)
 2. [Quick Start](#quick-start)
-3. [Helper Mixins / classes](#helper-mixins--classes)
+3. [Mixins](#mixins)
     1. [Respond-to](#respond-to)
-    2. [Show / Hide](#show--hide)
-    3. [Prefix / Suffix](#prefix--suffix)
-    4. [Push / Pull](#push--pull)
-    5. [Order](#order)
-    6. [Row justify](#row-justify-content-classes)
-    7. [Wrap / no wrap](#row-no-wrap)
-    8. [Row reverse](#row-reverse)
+    2. [Add custom class](#)
+4. [Helper classes](#helper-classes)
+    1. [Show / Hide](#show--hide)
+    2. [Prefix / Suffix](#prefix--suffix)
+    3. [Push / Pull](#push--pull)
+    4. [Order](#order)
+    5. [Row justify](#row-justify-content-classes)
+    6. [Wrap / no wrap](#row-no-wrap)
+    7. [Row reverse](#row-reverse)
+    8. [No gutter](#no-gutter)
 
 ## Install
 
@@ -89,7 +92,7 @@ Use the grid in html. Basic Markup with breakpoints:
 </div>
 ```
 
-## Helper Mixins / Classes
+## Mixins
 
 There are some helper classes which you can use on each defined breakpoint.
 
@@ -102,6 +105,18 @@ Easy use of media queries in scss files for each defined breakpoint.
   property: style;
 }  
 ```
+
+### Add custom class
+
+Adds a custom class for each breakpoint.
+
+```scss
+@include easy-add-class(name) {
+  property: style;
+}
+```
+
+## Helper Classes
 
 ### Show / Hide
 

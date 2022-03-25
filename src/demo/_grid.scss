@@ -16,3 +16,15 @@ $container-max: 1680px;
         gutter-width: 10px,
         vertical-space: 10px,
 ));
+
+@include easy-add-class(tal) {
+  text-align: left !important;
+}
+
+@include easy-add-class(tar) {
+  text-align: right !important;
+}
+
+@include easy-add-class(tac) {
+  text-align: center !important;
+}

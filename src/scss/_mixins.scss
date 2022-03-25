@@ -301,3 +301,28 @@
     }
   }
 }
+
+/**
+ * Add custom classes to each breakpoint
+ * @author Ivo Wermelinger @iwe-hi / @ivowermelinger
+ * @param 		{String} 		$name 		     The new breakpoint name
+ *
+ * @example 	scss
+ * @include easy-add-class(tal) {
+      text-align: left !important;
+ };
+ *
+ */
+@mixin easy-add-class($name) {
+  .#{$name} {
+    @content;
+  }
+
+  @each $key, $value in $breakpoints {
+    @include respond-to($key) {
+      .#{$name}\@#{$key} {
+        @content;
+      }
+    }
+  }
+}
