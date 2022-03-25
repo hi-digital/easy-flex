@@ -10,7 +10,7 @@
     "grid system",
     "scss grid"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
