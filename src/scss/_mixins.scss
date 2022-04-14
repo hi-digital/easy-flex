@@ -184,7 +184,7 @@
  */
 @mixin create-grid-states() {
   $columns-amount: map-get($settings, columns);
-  @for $index from 1 through $columns-amount {
+  @for $index from $columns-amount through 0 {
     @each $key, $value in $breakpoints {
       @include respond-to($key) {
         .gr-#{$index}\@#{$key} {
