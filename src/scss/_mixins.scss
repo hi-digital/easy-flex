@@ -184,16 +184,13 @@
  */
 @mixin create-grid-states() {
   $columns-amount: map-get($settings, columns);
-  @for $index from $columns-amount through 0 {
-    @each $key, $value in $breakpoints {
-      @include respond-to($key) {
+
+  @each $key, $value in $breakpoints {
+    @include respond-to($key) {
+      @for $index from 1 through $columns-amount {
         .gr-#{$index}\@#{$key} {
           max-width: math.div(100%, $columns-amount) * $index;
-          width: math.div(100%, $columns-amount) * $index;
-          flex-direction: column;
-          display: block;
-          box-sizing: border-box;
-          flex: 0 0 auto;
+          flex-basis: math.div(100%, $columns-amount) * $index;
 
           @each $key, $value in $breakpoints {
             @include respond-to($key) {
@@ -232,7 +229,7 @@
 @mixin create-prefixes() {
   $columns-amount: map-get($settings, columns);
 
-  @for $index from 1 through $columns-amount {
+  @for $index from $columns-amount through 1 {
     @each $key, $value in $breakpoints {
       @include respond-to($key) {
         .prefix-#{$index}\@#{$key} {
@@ -270,7 +267,7 @@
 @mixin create-order() {
   $columns-amount: map-get($settings, columns);
 
-  @for $index from 1 through $columns-amount {
+  @for $index from $columns-amount through 1 {
     @each $key, $value in $breakpoints {
       @include respond-to($key) {
         .order-#{$index}\@#{$key} {
