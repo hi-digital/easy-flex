@@ -59,11 +59,12 @@ $gutter-widths: ();
   // Grid setup mixins
   @include create-container();
   @include create-row();
-  @include create-grid-base();
   @include create-grid-states();
+  @include create-grid-base();
   @include create-prefixes();
 
   // Helper classes
   @include create-order();
   @include create-show-and-hide();
+  @include create-gutter-options();
 }
