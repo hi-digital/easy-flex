@@ -75,6 +75,10 @@
       justify-content: flex-end;
     }
 
+    &-justify-center {
+      justify-content: center;
+    }
+
     &-no-wrap {
       flex-flow: column nowrap;
     }
@@ -100,6 +104,10 @@
 
         &-justify-end\@#{$key} {
           justify-content: flex-end;
+        }
+
+        &-justify-center\@#{$key} {
+          justify-content: center;
         }
 
         &-no-wrap\@#{$key} {

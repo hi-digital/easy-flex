@@ -1,6 +1,6 @@
 # @hi_digital/easy-flex
 
-![npm package version](https://img.shields.io/badge/version-v1.3.0-blue)
+![npm package version](https://img.shields.io/badge/version-v1.4.0-blue)
 ![NPM](https://img.shields.io/badge/license-MIT-brightgreen)
 ![dependency status](https://img.shields.io/librariesio/release/npm/@hi_digital/easy-flex)
 ![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fhi-schweiz.ch)
@@ -250,6 +250,12 @@ Sets justify content property on the row for each breakpoint
 
 .row-justify-even
 .row-justify-even@{breakpoint}
+
+.row-justify-end
+.row-justify-end@{breakpoint}
+
+.row-justify-center
+.row-justify-center@{breakpoint}
 ```
 
 ### Row no wrap
