@@ -7,7 +7,9 @@
 
 Easy Flex is a lightweight, simple to use scss grid system based on css flexbox. It is heavily inspired
 by [Coffeekraken's gridle v2.0.48](https://github.com/Coffeekraken/gridle/tree/2e6e81e9d10a8dbdc809fe19ea792a532433b5d5)
-.
+. 
+
+[Easy Flex Demo Page](https://easy-flex.netlify.app/)
 
 ## Table of content
 
