@@ -1,6 +1,6 @@
 # @hi_digital/easy-flex
 
-![npm package version](https://img.shields.io/badge/version-v1.4.0-blue)
+![npm package version](https://img.shields.io/badge/version-v1.5.0-blue)
 ![NPM](https://img.shields.io/badge/license-MIT-brightgreen)
 ![dependency status](https://img.shields.io/librariesio/release/npm/@hi_digital/easy-flex)
 ![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fhi-schweiz.ch)
@@ -24,9 +24,10 @@ by [Coffeekraken's gridle v2.0.48](https://github.com/Coffeekraken/gridle/tree/2
     3. [Push / Pull](#push--pull)
     4. [Order](#order)
     5. [Row justify](#row-justify-content-classes)
-    6. [Wrap / no wrap](#row-no-wrap)
-    7. [Row reverse](#row-reverse)
-    8. [No gutter](#no-gutter)
+    6. [Row align](#row-align-items-classes)
+    7. [Wrap / no wrap](#row-no-wrap)
+    8. [Row reverse](#row-reverse)
+    9. [No gutter](#no-gutter)
 
 ## Install
 
@@ -256,6 +257,26 @@ Sets justify content property on the row for each breakpoint
 
 .row-justify-center
 .row-justify-center@{breakpoint}
+```
+### Row align items classes
+
+Sets align items property on the row for each breakpoint
+
+```html
+.row--align-center
+.row--align-center@{breakpoint}
+
+.row-align-start
+.row-align-start@{breakpoint}
+
+.row--align-end
+.row--align-end@{breakpoint}
+
+.row-align-stretch
+.row--align-stretch@{breakpoint}
+
+.row-align-baseline
+.row-align-baseline@{breakpoint}
 ```
 
 ### Row no wrap

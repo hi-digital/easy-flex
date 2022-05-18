@@ -59,6 +59,26 @@
       }
     }
 
+    &-align-center {
+      align-items: center;
+    }
+
+    &-align-start {
+      align-items: flex-start;
+    }
+
+    &-align-end {
+      align-items: flex-end;
+    }
+
+    &-align-stretch {
+      align-items: stretch;
+    }
+
+    &-align-baseline {
+      align-items: baseline;
+    }
+
     &-justify-between {
       justify-content: space-between;
     }
@@ -85,6 +105,26 @@
 
     @each $key, $value in $breakpoints {
       @include respond-to($key) {
+
+        &-align-center\@#{$key} {
+          align-items: center;
+        }
+
+        &-align-start\@#{$key} {
+          align-items: flex-start;
+        }
+
+        &-align-end\@#{$key} {
+          align-items: flex-end;
+        }
+
+        &-align-stretch\@#{$key} {
+          align-items: stretch;
+        }
+
+        &-align-baseline\@#{$key} {
+          align-items: baseline;
+        }
 
         &-justify-between\@#{$key} {
           justify-content: space-between;
