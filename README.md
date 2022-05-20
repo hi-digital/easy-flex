@@ -1,13 +1,13 @@
 # @hi_digital/easy-flex
 
-![npm package version](https://img.shields.io/badge/version-v1.5.0-blue)
+![npm package version](https://img.shields.io/badge/version-v1.6.0-blue)
 ![NPM](https://img.shields.io/badge/license-MIT-brightgreen)
 ![dependency status](https://img.shields.io/librariesio/release/npm/@hi_digital/easy-flex)
 ![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fhi-schweiz.ch)
 
 Easy Flex is a lightweight, simple to use scss grid system based on css flexbox. It is heavily inspired
 by [Coffeekraken's gridle v2.0.48](https://github.com/Coffeekraken/gridle/tree/2e6e81e9d10a8dbdc809fe19ea792a532433b5d5)
-. 
+.
 
 [Easy Flex Demo Page](https://easy-flex.netlify.app/)
 
@@ -219,6 +219,10 @@ class.
 ```html
 .order-{number}
 .order-{number}@{breakpoint}
+.order-first
+.order-first@{breakpoint}
+.order-last
+.order-last@{breakpoint}
 ```
 
 ```html
@@ -258,6 +262,7 @@ Sets justify content property on the row for each breakpoint
 .row-justify-center
 .row-justify-center@{breakpoint}
 ```
+
 ### Row align items classes
 
 Sets align items property on the row for each breakpoint

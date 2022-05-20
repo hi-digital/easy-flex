@@ -216,6 +216,14 @@
     .order-#{$index} {
       order: $index;
     }
+
+    .order-first {
+      order: -1;
+    }
+
+    .order-last {
+      order: 9999;
+    }
   }
 
   .show {
@@ -335,6 +343,14 @@
       @include respond-to($key) {
         .order-#{$index}\@#{$key} {
           order: $index;
+        }
+
+        .order-first\@#{$key} {
+          order: -1;
+        }
+
+        .order-last\@#{$key} {
+          order: 9999;
         }
       }
     }
