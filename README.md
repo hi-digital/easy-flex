@@ -1,6 +1,6 @@
 # @hi_digital/easy-flex
 
-![npm package version](https://img.shields.io/badge/version-v1.6.0-blue)
+![npm package version](https://img.shields.io/badge/version-v1.6.1-blue)
 ![NPM](https://img.shields.io/badge/license-MIT-brightgreen)
 ![dependency status](https://img.shields.io/librariesio/release/npm/@hi_digital/easy-flex)
 ![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fhi-schweiz.ch)

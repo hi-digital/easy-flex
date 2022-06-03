@@ -1,5 +1,4 @@
 @use 'sass:math';
-@import 'helpers';
 
 /**
  * Create the base container with responsive width values for each breakpoint
@@ -337,7 +336,12 @@
  *
  */
 @mixin create-order() {
-  $columns-amount: map-get($settings, columns);
+  $columns-amount: 12;
+
+  @if map-has-key($settings, columns) {
+    $columns-amount: map-get($settings, columns);
+  }
+
   @for $index from $columns-amount through 1 {
     @each $key, $value in $breakpoints {
       @include respond-to($key) {
