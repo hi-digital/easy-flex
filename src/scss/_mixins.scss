@@ -229,6 +229,12 @@
     display: unset;
   }
 
+  .row {
+    &.show {
+      display: flex;
+    }
+  }
+
   .hide {
     display: none;
   }
@@ -362,7 +368,7 @@
 }
 
 /**
- * Create order class for each breakpoint
+ * Create show and hide class for each breakpoint
  * @author Ivo Wermelinger @iwe-hi / @ivowermelinger
  *
  * @example 	scss
@@ -374,6 +380,11 @@
     @include respond-to($key) {
       .show\@#{$key} {
         display: unset;
+      }
+      .row {
+        &.show\@#{$key} {
+          display: flex;
+        }
       }
       .hide\@#{$key} {
         display: none;
