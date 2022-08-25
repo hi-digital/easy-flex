@@ -1,6 +1,6 @@
 {
   "name": "@hi_digital/easy-flex",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "Lightweight and easy to use css flexbox grid system",
   "keywords": [
     "flexbox",
@@ -17,7 +17,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "sass": "^1.49.*"
+    "sass": "^1.54.*"
   },
   "devDependencies": {
     "autoprefixer": "^10.4",
