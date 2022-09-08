@@ -2,6 +2,10 @@
   "name": "@hi_digital/easy-flex",
   "version": "1.6.4",
   "description": "Lightweight and easy to use css flexbox grid system",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hi-digital/easy-flex"
+  },
   "keywords": [
     "flexbox",
     "scss",
