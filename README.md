@@ -15,7 +15,6 @@ by [Coffeekraken's gridle v2.0.48](https://github.com/Coffeekraken/gridle/tree/2
 
 1. [Install](#install)
 2. [Quick Start](#quick-start)
-3. [Working with frameworks](#working-with-frameworks)
 4. [Mixins](#mixins)
     1. [Respond-to](#respond-to)
     2. [Add custom class](#add-custom-class)
@@ -95,10 +94,6 @@ Use the grid in html. Basic Markup with breakpoints:
     </div>
 </div>
 ```
-
-## Working with frameworks
-If you are working with frameworks like SvelteKit or Astro.js, make sure to include the grid on a global scope.
-Otherwise, there could be problems with the media queries. 
 
 ## Mixins
 
