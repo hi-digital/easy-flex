@@ -21,11 +21,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "sass": "^1.54.*"
+    "sass": "^1.57.*"
   },
   "devDependencies": {
     "autoprefixer": "^10.4",
     "postcss-scss": "^4.0",
-    "vite": "^3.0"
+    "vite": "^4.0"
   }
 }
