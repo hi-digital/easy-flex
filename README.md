@@ -123,7 +123,7 @@ Adds a custom class for each breakpoint.
 
 ```scss
 @include easy-add-class(tac) {
-  text-align: center !important;
+  text-align: center;
 }
 ```
 
