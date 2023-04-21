@@ -134,7 +134,7 @@ Adds a custom class for each breakpoint.
 <div class="container">
     <div class="row">
         <div class="gr-12 gr-6@small tac@small">
-            This column gets hidden @small and shown again on @large
+            This column is centered @small
         </div>
     </div>
 </div>
