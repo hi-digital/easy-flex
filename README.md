@@ -15,10 +15,10 @@ by [Coffeekraken's gridle v2.0.48](https://github.com/Coffeekraken/gridle/tree/2
 
 1. [Install](#install)
 2. [Quick Start](#quick-start)
-4. [Mixins](#mixins)
-    1. [Respond-to](#respond-to)
+3. [Mixins](#mixins)
+    1. [Respond-to](#respond-to-media-query-mixin)
     2. [Add custom class](#add-custom-class)
-5. [Helper classes](#helper-classes)
+4. [Helper classes](#helper-classes)
     1. [Show / Hide](#show--hide)
     2. [Prefix / Suffix](#prefix--suffix)
     3. [Push / Pull](#push--pull)
@@ -99,13 +99,17 @@ Use the grid in html. Basic Markup with breakpoints:
 
 There are some helper classes which you can use on each defined breakpoint.
 
-### Respond to
+### Respond to media query mixin
 
-Easy use of media queries in scss files for each defined breakpoint.
+Easy use of media queries in scss files for each defined breakpoint. Creates a media query with min-width for the breakpoint.
 
 ```scss
 @include respond-to(small) {
   property: style;
+}
+
+@include respond-to(large) {
+   property: style;
 }  
 ```
 
